@@ -1,0 +1,239 @@
+/* --- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+
+-Line heights
+Default: 1
+
+--- 02 COLORS 
+
+Primary: 
+
+Tints: 
+Shades: 
+Accents:
+Greys:
+
+--- 05 SHADOWS
+
+--- 06 BORDER-READIUS
+
+--- 07 WHITESPACE
+
+-SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128  */
+
+:root{
+    --color-strong-cyan: hsl(172, 67%, 45%);
+    --color-very-dark-cyan: hsl(183, 100%, 15%);
+    --color-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --color-grayish-cyan: hsl(184, 14%, 56%);
+    --color-light-grayish-cyan: hsl(185, 41%, 84%);
+    --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-white: hsl(0,0%,100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: "Space Mono", sans-serif;
+}
+
+*:focus{
+    outline: 3px solid var(--color-strong-cyan);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--color-light-grayish-cyan);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem auto;
+    gap: 6rem;
+}
+
+.main-container{
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+    min-height: 42rem;
+    box-shadow: 20px 20px 20px rgba(0, 73, 77, 0.152) ;
+}
+
+/*##################### Selecting Part ####################*/
+
+.selecting-part{
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    gap: 3.2rem;
+}
+
+.input-text{
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: var(--color-dark-grayish-cyan);
+}
+
+.bill-input, .people-input{
+    position: relative;
+    padding: 8px 16px;
+    background-color: var(--color-very-light-grayish-cyan);
+    border: none;
+    border-radius: 6px;
+    width: 95%;
+    height: 3.6rem;
+    text-align: right;
+    color: var(--color-very-dark-cyan);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+.bill-input{
+    background: url(../images/icon-dollar.svg) no-repeat scroll 1rem 1rem;
+}
+
+.people-input{
+    background: url(../images/icon-person.svg) no-repeat scroll 1rem 1rem;
+}
+
+.bill-input::placeholder, .people-input::placeholder{
+    font-size: 2.4rem;
+    color: var(--color-grayish-cyan);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btns{
+    transition: all 0.3s;
+}
+
+.btns:focus{
+    background-color: var(--color-strong-cyan);
+    color: var(--color-very-dark-cyan);
+}
+
+input:hover{
+    outline: 2px solid var(--color-strong-cyan);
+}
+
+.tips-btns{
+    display: grid;
+    grid-template-columns: repeat(3,9.6rem);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 1.2rem;
+    row-gap: 1.6rem;
+}
+
+.btn{
+    border: none;
+    background-color: var(--color-very-dark-cyan);
+    color: var(--color-white);
+    padding: 8px;
+    font-size: 1.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btns:hover{
+    background-color: var(--color-strong-cyan);
+    color: var(--color-very-dark-cyan);
+}
+
+.custom-input{
+    background-color: var(--color-very-light-grayish-cyan);
+    color: var(--color-very-dark-cyan);
+    text-align: right;
+}
+
+.custom-input::placeholder{
+    text-align: center;
+    color: var(--color-dark-grayish-cyan);
+}
+
+/*###################### Display Part ###################*/
+
+.display-part{
+    background-color: var(--color-very-dark-cyan);
+    padding: 3.2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    width: 35rem;
+}
+
+.tip-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.amount-title{
+    color: var(--color-very-light-grayish-cyan);
+    font-size: 1.4rem;
+}
+
+.person-text{
+    color: var(--color-grayish-cyan);
+    font-size: 1.2rem;
+}
+
+.tip-number{
+    font-size: 3.6rem;
+    color: var(--color-strong-cyan);
+}
+
+.reset-btn{
+    background-color: var(--color-dark-grayish-cyan);
+    border: none;
+    border-radius: 3px;
+    padding: 12px;
+    color: var(--color-very-dark-cyan);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.116) ;
+}
+
+.active{
+    background-color: var(--color-strong-cyan);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.active:hover{
+    background-color: var(--color-light-grayish-cyan);
+}
+
+.error{
+    outline: 2px solid rgba(224, 75, 75, 0.59);
+}
+
+.error-text::after{
+    content: "Can't be zero";
+    position: absolute;
+    color: rgba(224, 75, 75, 0.786);
+    left: 60rem;
+    text-align: right;
+}

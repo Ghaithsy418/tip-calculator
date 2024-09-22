@@ -1,0 +1,32 @@
+@media(max-width: 49.6rem){
+
+    html{
+        font-size: 55%;
+    }
+
+    .main-container{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 27.6rem){
+
+    html{
+        font-size: 52%;
+    }
+
+    .main{
+        gap: 2.4rem;
+    }
+
+    .input-text{
+        margin-bottom: 1.6rem;
+    }
+
+    .tips-btns{
+        grid-template-columns: repeat(2,13rem);
+        grid-template-rows: repeat(3,1f);
+        justify-content: center;
+        align-items: center;
+    }
+}
